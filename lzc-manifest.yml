@@ -13,4 +13,4 @@ application:
 
 services:
   ydfeed:
-    image: registry.lazycat.cloud/ybfeed:0.0.1
+    image: registry.lazycat.cloud/ybfeed:0.0.2

@@ -274,19 +274,19 @@ func (api *ApiHandler) feedGetFunc(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	} else {
-		secret, _ := utils.GetSecret(r)
-		hL.Logger.Debug("secret", slog.String("secret", secret))
+		// secret, _ := utils.GetSecret(r)
+		// hL.Logger.Debug("secret", slog.String("secret", secret))
 
-		err = f.IsSecretValid(secret)
-		if err != nil {
-			switch {
-			case errors.Is(err, feed.FeedErrorInvalidSecret) || errors.Is(err, feed.FeedConfigErrorPinExpired):
-				utils.CloseWithCodeAndMessage(w, 401, "Unauthorized")
-			default:
-				utils.CloseWithCodeAndMessage(w, 500, err.Error())
-			}
-			return
-		}
+		// err = f.IsSecretValid(secret)
+		// if err != nil {
+		// 	switch {
+		// 	case errors.Is(err, feed.FeedErrorInvalidSecret) || errors.Is(err, feed.FeedConfigErrorPinExpired):
+		// 		utils.CloseWithCodeAndMessage(w, 401, "Unauthorized")
+		// 	default:
+		// 		utils.CloseWithCodeAndMessage(w, 500, err.Error())
+		// 	}
+		// 	return
+		// }
 	}
 
 	publicFeed, err := f.Public()
