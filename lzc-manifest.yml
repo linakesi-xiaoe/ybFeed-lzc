@@ -1,0 +1,16 @@
+lzc-sdk-version: 0.1
+name: ybfeed
+package: iamxiaoe.lzcapp.ybfeed
+version: 0.0.1
+description: 个人微提要，您可以在其中发布文本或图像和文件的片段。
+license: https://choosealicense.com/licenses/mit/
+homepage: https://github.com/ybizeul/ybFeed
+author: ybizeul
+application:
+  subdomain: ybfeed
+  routes:
+    - /=http://ydfeed.iamxiaoe.lzcapp.ybfeed.lzcapp:8080
+
+services:
+  ydfeed:
+    image: registry.lazycat.cloud/ybfeed:0.0.1

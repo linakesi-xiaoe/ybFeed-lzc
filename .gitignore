@@ -6,3 +6,4 @@ web/ui/build/
 dist/
 .vscode
 __debug*
+*.lpk
